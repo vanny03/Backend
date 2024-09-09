@@ -2,6 +2,7 @@ import "reflect-metadata"
 import { DataSource } from "typeorm"
 import { User } from "./entity/User.js"
 import { Product } from "./entity/Product.js"
+import { Login } from "./entity/Login.js"
 
 
 export const AppDataSource = new DataSource({
@@ -13,7 +14,8 @@ export const AppDataSource = new DataSource({
     database: "cafe_management_system",
     synchronize: true,
     logging: false,
-    entities: [User, Product],
+    entities: [User, Product, Login],
     migrations: [],
     subscribers: [],
 })
+
